@@ -222,5 +222,166 @@
     "yahoo": "XIAOMI-W",
     "tencent_cn": null,
     "override_cn": "小米集团"
+  },
+  "HK2388": {
+    "display": "BOC HONG KONG（HK2388）",
+    "yahoo_symbol": "2388.HK",
+    "yahoo": "BOC HONG KONG",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2628": {
+    "display": "CHINA LIFE（HK2628）",
+    "yahoo_symbol": "2628.HK",
+    "yahoo": "CHINA LIFE",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2318": {
+    "display": "PING AN（HK2318）",
+    "yahoo_symbol": "2318.HK",
+    "yahoo": "PING AN",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK700": {
+    "display": "腾讯控股（HK700）",
+    "yahoo_symbol": "0700.HK",
+    "yahoo": "TENCENT",
+    "tencent_cn": null,
+    "override_cn": "腾讯控股"
+  },
+  "HK9999": {
+    "display": "NTES-S（HK9999）",
+    "yahoo_symbol": "9999.HK",
+    "yahoo": "NTES-S",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK9988": {
+    "display": "BABA-W（HK9988）",
+    "yahoo_symbol": "9988.HK",
+    "yahoo": "BABA-W",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK981": {
+    "display": "SMIC（HK981）",
+    "yahoo_symbol": "0981.HK",
+    "yahoo": "SMIC",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK1024": {
+    "display": "KUAISHOU-W（HK1024）",
+    "yahoo_symbol": "1024.HK",
+    "yahoo": "KUAISHOU-W",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2610": {
+    "display": "NANSHAN AL INTL（HK2610）",
+    "yahoo_symbol": "2610.HK",
+    "yahoo": "NANSHAN AL INTL",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK3069": {
+    "display": "CAM HSBIOTECH（HK3069）",
+    "yahoo_symbol": "3069.HK",
+    "yahoo": "CAM HSBIOTECH",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK1880": {
+    "display": "CTG DUTY-FREE（HK1880）",
+    "yahoo_symbol": "1880.HK",
+    "yahoo": "CTG DUTY-FREE",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2259": {
+    "display": "ZIJIN GOLD INTL（HK2259）",
+    "yahoo_symbol": "2259.HK",
+    "yahoo": "ZIJIN GOLD INTL",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK9880": {
+    "display": "UBTECH ROBOTICS（HK9880）",
+    "yahoo_symbol": "9880.HK",
+    "yahoo": "UBTECH ROBOTICS",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK32": {
+    "display": "CROSS-HAR(HOLD)（HK32）",
+    "yahoo_symbol": "0032.HK",
+    "yahoo": "CROSS-HAR(HOLD)",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK522": {
+    "display": "ASMPT（HK522）",
+    "yahoo_symbol": "0522.HK",
+    "yahoo": "ASMPT",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK1113": {
+    "display": "CK ASSET（HK1113）",
+    "yahoo_symbol": "1113.HK",
+    "yahoo": "CK ASSET",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2313": {
+    "display": "SHENZHOU INTL（HK2313）",
+    "yahoo_symbol": "2313.HK",
+    "yahoo": "SHENZHOU INTL",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2899": {
+    "display": "ZIJIN MINING（HK2899）",
+    "yahoo_symbol": "2899.HK",
+    "yahoo": "ZIJIN MINING",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2888": {
+    "display": "STANCHART（HK2888）",
+    "yahoo_symbol": "2888.HK",
+    "yahoo": "STANCHART",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK2331": {
+    "display": "LI NING（HK2331）",
+    "yahoo_symbol": "2331.HK",
+    "yahoo": "LI NING",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK3690": {
+    "display": "MEITUAN-W（HK3690）",
+    "yahoo_symbol": "3690.HK",
+    "yahoo": "MEITUAN-W",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK9660": {
+    "display": "HORIZONROBOT-W（HK9660）",
+    "yahoo_symbol": "9660.HK",
+    "yahoo": "HORIZONROBOT-W",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HK1211": {
+    "display": "BYD COMPANY（HK1211）",
+    "yahoo_symbol": "1211.HK",
+    "yahoo": "BYD COMPANY",
+    "tencent_cn": null,
+    "override_cn": null
   }
 }
