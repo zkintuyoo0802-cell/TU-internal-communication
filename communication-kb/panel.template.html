@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2025–2026 交流纪要知识库</title>
+  <style>
+    :root {
+      /* 深蓝底 + 略亮的浮层，保证正文可读 */
+      --bg: #0a1628;
+      --bg-elevated: #0d1f35;
+      --surface: #132a45;
+      --border: #1e3a5c;
+      --text: #e8edf4;
+      --text-body: #c5d0e0;
+      --muted: #8fa3b8;
+      --accent: #6eb3ff;
+      --accent-soft: rgba(110, 179, 255, 0.14);
+      --input-bg: #0f2238;
+      --focus-ring: rgba(110, 179, 255, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      background-image: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg) 38%, var(--bg) 100%);
+      min-height: 100vh;
+      color: var(--text);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px 14px;
+    }
+    header h1 {
+      margin: 0 0 4px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    header .sub {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+      min-height: calc(100vh - 72px);
+    }
+    aside {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 16px;
+    }
+    main { padding: 16px 20px 32px; }
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin: 12px 0 6px;
+    }
+    label:first-child { margin-top: 0; }
+    select, input[type="search"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--input-bg);
+      color: var(--text);
+      font: inherit;
+    }
+    select option { background: var(--surface); color: var(--text); }
+    select:focus, input:focus {
+      outline: 2px solid var(--focus-ring);
+      border-color: var(--accent);
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pill b { color: var(--text); font-weight: 600; }
+    .list { display: flex; flex-direction: column; gap: 10px; }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .year-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 2px 8px;
+      flex-shrink: 0;
+    }
+    .meta { font-size: 12px; color: var(--muted); }
+    .communicated-at {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0 8px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(110, 179, 255, 0.28);
+    }
+    .tag.neutral {
+      background: rgba(15, 34, 56, 0.65);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .kp-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin: 4px 0 8px;
+    }
+    .kp-list {
+      margin: 0 0 10px;
+      padding-left: 1.15em;
+      color: var(--text-body);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .kp-list li { margin-bottom: 6px; }
+    .kp-list li::marker { color: var(--accent); font-weight: 600; }
+    details.more {
+      margin-top: 4px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+    details.more summary {
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--accent);
+      user-select: none;
+    }
+    details.more summary:hover { text-decoration: underline; }
+    .summary {
+      font-size: 13px;
+      color: var(--text-body);
+      white-space: pre-wrap;
+      margin-top: 8px;
+    }
+    .path {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    .empty {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+    }
+    .stock-rollup {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .stock-rollup h2 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .stock-rollup .rollup-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .rollup-doc {
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .rollup-doc:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .rollup-doc h3 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .rollup-snips { margin: 0; padding-left: 1.1em; font-size: 12px; color: var(--text-body); }
+    .rollup-snips li { margin-bottom: 6px; }
+    .snip-label {
+      display: inline-block;
+      min-width: 4.5em;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      margin-right: 6px;
+    }
+    .stock-row-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin: 8px 0 6px;
+    }
+    .stock-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+    a.stock-chip, button.stock-chip {
+      font: inherit;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(110, 179, 255, 0.45);
+      background: var(--accent-soft);
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    a.stock-chip:hover, button.stock-chip:hover {
+      background: rgba(110, 179, 255, 0.22);
+    }
+    .person-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .btn-person {
+      font: inherit;
+      font-size: 12px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(110, 179, 255, 0.45);
+      background: var(--accent-soft);
+      color: var(--accent);
+      cursor: pointer;
+    }
+    .btn-person:hover { background: rgba(110, 179, 255, 0.22); }
+    .btn-person-secondary {
+      border-color: var(--border);
+      background: rgba(15, 34, 56, 0.5);
+      color: var(--muted);
+    }
+    .btn-person-secondary:hover {
+      color: var(--text);
+      background: rgba(15, 34, 56, 0.85);
+    }
+    button.person-chip {
+      font: inherit;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(110, 179, 255, 0.55);
+      background: rgba(110, 179, 255, 0.08);
+      color: var(--accent);
+      cursor: pointer;
+    }
+    button.person-chip:hover {
+      background: rgba(110, 179, 255, 0.16);
+    }
+    .person-stock-banner {
+      margin: 0 0 14px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .person-stock-banner h3 {
+      margin: 0 0 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .person-stock-banner .sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .person-card-stocks {
+      margin: 0 0 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px dashed rgba(110, 179, 255, 0.35);
+      background: rgba(110, 179, 255, 0.06);
+    }
+    .bias-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+    .bias-pill.long {
+      color: #86efac;
+      border: 1px solid rgba(134, 239, 172, 0.45);
+      background: rgba(34, 197, 94, 0.12);
+    }
+    .bias-pill.short {
+      color: #fca5a5;
+      border: 1px solid rgba(252, 165, 165, 0.45);
+      background: rgba(239, 68, 68, 0.12);
+    }
+    .bias-pill.neutral {
+      color: var(--muted);
+      border: 1px solid var(--border);
+      background: rgba(15, 34, 56, 0.45);
+    }
+    .clear-stock {
+      font-size: 12px;
+      color: var(--accent);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 8px;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">2025–2026 交流纪要知识库</h1>
+    <div class="sub" id="page-sub"></div>
+  </header>
+  <div class="layout">
+    <aside>
+      <label for="f-inst">沟通机构</label>
+      <select id="f-inst"></select>
+      <label for="f-year">纪要年份</label>
+      <select id="f-year"></select>
+      <label for="f-asset">资产类别</label>
+      <select id="f-asset"></select>
+      <label for="f-stock-nav">个股跳转</label>
+      <select id="f-stock-nav"></select>
+      <label for="f-ticker">关键标的 / 个股</label>
+      <input id="f-ticker" type="search" placeholder="名称或代码，如 宁德时代、NVDA" />
+      <label for="f-person">关键人物</label>
+      <input
+        id="f-person"
+        type="search"
+        list="people-datalist"
+        placeholder="丁总、罗总、温总、巴菲特、李录、段永平 或 其他"
+        autocomplete="off"
+      />
+      <datalist id="people-datalist"></datalist>
+      <div class="person-actions">
+        <button type="button" id="btn-person-filter" class="btn-person">人物检索</button>
+        <button type="button" id="btn-person-clear" class="btn-person btn-person-secondary">清除人物</button>
+      </div>
+      <label for="f-q">全文检索</label>
+      <input id="f-q" type="search" placeholder="多词用空格/逗号分隔，命中任一即可（并集）" />
+    </aside>
+    <main>
+      <div id="stock-rollup" class="stock-rollup" hidden></div>
+      <div class="stats" id="stats"></div>
+      <div id="person-stock-banner" class="person-stock-banner" hidden></div>
+      <div class="list" id="list"></div>
+    </main>
+  </div>
+  <script type="application/json" id="kb-embed">__KB_JSON__</script>
+  <script>
+    const payload = JSON.parse(document.getElementById("kb-embed").textContent);
+    const records = payload.records || [];
+    const stockIndex = payload.stock_index || [];
+
+    function uniq(arr) {
+      const s = new Set();
+      const out = [];
+      for (const x of arr) {
+        if (!s.has(x)) { s.add(x); out.push(x); }
+      }
+      return out;
+    }
+
+    const institutions = uniq(records.map((r) => r.institution).filter(Boolean)).sort((a, b) => a.localeCompare(b, "zh-CN"));
+    const assets = uniq(records.flatMap((r) => r.asset_tags || [])).sort((a, b) => a.localeCompare(b, "zh-CN"));
+    const peopleAll = uniq(records.flatMap((r) => r.key_people || [])).sort((a, b) => a.localeCompare(b, "zh-CN"));
+
+    const elInst = document.getElementById("f-inst");
+    const elYear = document.getElementById("f-year");
+    const elAsset = document.getElementById("f-asset");
+    const elStockNav = document.getElementById("f-stock-nav");
+    const elTicker = document.getElementById("f-ticker");
+    const elPerson = document.getElementById("f-person");
+    const elPeopleDl = document.getElementById("people-datalist");
+    const elBtnPerson = document.getElementById("btn-person-filter");
+    const elBtnPersonClear = document.getElementById("btn-person-clear");
+    const elQ = document.getElementById("f-q");
+    const elList = document.getElementById("list");
+    const elStats = document.getElementById("stats");
+    const elRollup = document.getElementById("stock-rollup");
+    const elPersonStockBanner = document.getElementById("person-stock-banner");
+
+    function opt(sel, label, value) {
+      const o = document.createElement("option");
+      o.value = value;
+      o.textContent = label;
+      sel.appendChild(o);
+    }
+    function yearSortKey(y) {
+      const s = String(y || "");
+      return s && s !== "unknown" ? s : "0000";
+    }
+
+    opt(elInst, "全部机构", "");
+    institutions.forEach((x) => opt(elInst, x, x));
+    const years = uniq(records.map((r) => r.archive_year).filter(Boolean)).sort((a, b) =>
+      yearSortKey(b).localeCompare(yearSortKey(a))
+    );
+    opt(elYear, "全部年份", "");
+    years.forEach((y) => opt(elYear, y + "年", y));
+    opt(elAsset, "全部类别", "");
+    assets.forEach((x) => opt(elAsset, x, x));
+
+    peopleAll.forEach((p) => {
+      const o = document.createElement("option");
+      o.value = p;
+      elPeopleDl.appendChild(o);
+    });
+
+    /** 跳转/展示用：优先股票名称，去掉「名称（代码）」尾部括号代码 */
+    function displayAsStockName(display, key) {
+      const raw = String((display || key) || "").trim();
+      if (!raw) return "";
+      const stripped = raw.replace(
+        /[（(]\s*(?:[03689]\d{5}|[A-Za-z]{1,5}\.[NOKBA]|HK\d{3,5}|[A-Z]{2,6})\s*[）)]$/i,
+        ""
+      ).trim();
+      return stripped.length >= 2 ? stripped : raw;
+    }
+    function stockNavLabel(entry) {
+      return displayAsStockName(entry.display, entry.key);
+    }
+
+    opt(elStockNav, "（全部 · 不按个股）", "");
+    [...stockIndex]
+      .sort((a, b) => (b.docs || []).length - (a.docs || []).length)
+      .forEach((s) => {
+        const n = (s.docs || []).length;
+        opt(elStockNav, stockNavLabel(s) + " · " + n + " 篇", s.key);
+      });
+
+    document.getElementById("page-title").textContent = payload.meta?.title || "交流纪要知识库";
+    document.getElementById("page-sub").textContent =
+      (payload.meta?.generated_at || "") +
+      " · 共 " +
+      (payload.meta?.record_count ?? records.length) +
+      " 条 · 个股 " +
+      (payload.meta?.stock_count ?? stockIndex.length) +
+      " 支 · 源目录：" +
+      (payload.meta?.input_dir || "");
+
+    function pickStockEntry(raw) {
+      const q = (raw || "").trim();
+      if (!q) return null;
+      let hit = stockIndex.find((x) => x.key === q || x.display === q);
+      if (hit) return hit;
+      hit = stockIndex.find((x) => stockNavLabel(x) === q);
+      if (hit) return hit;
+      const low = q.toLowerCase();
+      hit = stockIndex.find((x) => String(x.key).toLowerCase() === low);
+      if (hit) return hit;
+      hit = stockIndex.find((x) => String(x.display || "").toLowerCase() === low);
+      if (hit) return hit;
+      hit = stockIndex.find((x) => stockNavLabel(x).toLowerCase() === low);
+      return hit || null;
+    }
+
+    /** 全文检索：多关键词以空格/逗号/分号等分隔，命中任一即通过（OR / 并集） */
+    function querySearchTokens(raw) {
+      return String(raw || "")
+        .trim()
+        .split(/[\s,，;；|｜/、]+/)
+        .map((s) => s.trim().toLowerCase())
+        .filter(Boolean);
+    }
+
+    function matchFulltextBlob(r) {
+      const kps = (r.key_points || []).join(" ");
+      const smtxt = (r.stock_mentions || [])
+        .map((m) => (m.snippets || []).map((s) => s.text).join(" "))
+        .join(" ");
+      const ptxt = (r.key_people || []).join(" ");
+      return (
+        kps + " " + smtxt + " " + ptxt + " " + r.summary + " " + r.file_name + " " + (r.institution || "")
+      ).toLowerCase();
+    }
+
+    function keyMatchesTickerSearchToken(k, ttLower) {
+      const te = pickStockEntry(k);
+      const blob = te
+        ? (String(te.key) + " " + String(te.display || "") + " " + stockNavLabel(te)).toLowerCase()
+        : String(k).toLowerCase();
+      return blob.includes(ttLower);
+    }
+
+    /** 人物 + 个股同时启用：卡片内只展示与该标的相关的 stock_mentions / tickers / 要点 */
+    function scopeRecordToTickerView(r, ttLower) {
+      const t = (ttLower || "").trim().toLowerCase();
+      if (!t) return r;
+      const mentionHit = (m) => {
+        const pool = [m.key, m.display, displayAsStockName(m.display, m.key)]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return pool.includes(t);
+      };
+      const mentions = (r.stock_mentions || []).filter(mentionHit);
+      const tickers = (r.tickers || []).filter((x) => String(x).toLowerCase().includes(t));
+      const kps = Array.isArray(r.key_points) ? r.key_points : [];
+      const hitKp = kps.filter((p) => String(p).toLowerCase().includes(t));
+      const key_points = hitKp.length ? hitKp : kps;
+      return { ...r, stock_mentions: mentions, tickers, key_points };
+    }
+
+    function setStockHash(key) {
+      if (!key) {
+        location.hash = "";
+        return;
+      }
+      location.hash = "stock=" + encodeURIComponent(key);
+    }
+
+    function applyStockNavFromHash() {
+      const h = location.hash.replace(/^#/, "");
+      const m = h.match(/^stock=(.+)$/);
+      if (!m) return;
+      try {
+        const key = decodeURIComponent(m[1]);
+        const entry = pickStockEntry(key);
+        if (entry) {
+          elTicker.value = stockNavLabel(entry);
+          elStockNav.value = entry.key;
+        } else {
+          elTicker.value = key;
+          elStockNav.value = stockIndex.some((x) => x.key === key) ? key : "";
+        }
+      } catch (e) {
+        /* ignore malformed hash */
+      }
+    }
+
+    function jumpToStock(key) {
+      if (!key) {
+        elTicker.value = "";
+        elStockNav.value = "";
+        setStockHash("");
+        render();
+        return;
+      }
+      const entry = pickStockEntry(key);
+      const canonKey = entry ? entry.key : key;
+      elTicker.value = entry ? stockNavLabel(entry) : key;
+      elStockNav.value = stockIndex.some((x) => x.key === canonKey) ? canonKey : "";
+      setStockHash(canonKey);
+      render();
+      if (!elRollup.hidden) {
+        elRollup.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function renderStockRollup() {
+      elRollup.innerHTML = "";
+      const raw = elTicker.value.trim();
+      const entry = pickStockEntry(raw);
+      if (!entry || !(entry.docs || []).length) {
+        elRollup.hidden = true;
+        return;
+      }
+      let docsSorted = [...(entry.docs || [])];
+      const pfRoll = elPerson.value.trim().toLowerCase();
+      if (pfRoll) {
+        const ridOk = new Set(
+          records
+            .filter((rec) => {
+              const names = (rec.key_people || []).map((x) => String(x).toLowerCase());
+              return names.some((n) => n.includes(pfRoll));
+            })
+            .map((rec) => rec.id)
+        );
+        docsSorted = docsSorted.filter((d) => ridOk.has(d.record_id));
+      }
+      docsSorted.sort((a, b) => {
+        const ya = yearSortKey(a.archive_year);
+        const yb = yearSortKey(b.archive_year);
+        if (ya !== yb) return yb.localeCompare(ya);
+        return String(b.date || "").localeCompare(String(a.date || ""));
+      });
+      elRollup.hidden = false;
+      const h2 = document.createElement("h2");
+      h2.textContent = "个股汇总 · " + stockNavLabel(entry);
+      elRollup.appendChild(h2);
+      if (!docsSorted.length) {
+        const empty = document.createElement("div");
+        empty.className = "rollup-meta";
+        empty.textContent = pfRoll
+          ? "在「" + elPerson.value.trim() + "」人物筛选下，该标的暂无关联纪要。"
+          : "暂无该标的纪要。";
+        elRollup.appendChild(empty);
+        const clr0 = document.createElement("button");
+        clr0.type = "button";
+        clr0.className = "clear-stock";
+        clr0.textContent = "清除个股筛选";
+        clr0.addEventListener("click", () => jumpToStock(""));
+        elRollup.appendChild(clr0);
+        return;
+      }
+      const meta = document.createElement("div");
+      meta.className = "rollup-meta";
+      meta.textContent =
+        "在 " +
+        docsSorted.length +
+        " 份纪要中出现" +
+        (pfRoll ? "（已按人物筛选）" : "") +
+        "；以下为按文档聚合的场景 / 观点摘录（规则标注，非投资建议）。";
+      elRollup.appendChild(meta);
+      let bull = 0;
+      let bear = 0;
+      let neu = 0;
+      let scoreSum = 0;
+      for (const d of docsSorted) {
+        const b = d.bias || "中性";
+        scoreSum += Number(d.bias_score || 0);
+        if (b === "偏多") bull += 1;
+        else if (b === "偏空") bear += 1;
+        else neu += 1;
+      }
+      let cb = "中性";
+      if (bull > bear && bull >= 2) cb = "偏多";
+      else if (bear > bull && bear >= 2) cb = "偏空";
+      else if (scoreSum >= 6) cb = "偏多";
+      else if (scoreSum <= -6) cb = "偏空";
+      else if (bull > bear && bull === 1 && scoreSum >= 3) cb = "偏多";
+      else if (bear > bull && bear === 1 && scoreSum <= -3) cb = "偏空";
+      const cons = document.createElement("div");
+      cons.className = "rollup-meta";
+      cons.style.marginBottom = "10px";
+      const span = document.createElement("span");
+      span.className =
+        "bias-pill " + (cb === "偏多" ? "long" : cb === "偏空" ? "short" : "neutral");
+      span.textContent = "多空汇总 · " + cb;
+      cons.appendChild(span);
+      cons.appendChild(
+        document.createTextNode(
+          " · 跨" +
+            docsSorted.length +
+            "篇纪要：" +
+            bull +
+            "篇偏多·" +
+            bear +
+            "篇偏空·" +
+            neu +
+            "篇中性（累计分" +
+            scoreSum +
+            "）"
+        )
+      );
+      elRollup.appendChild(cons);
+      const clr = document.createElement("button");
+      clr.type = "button";
+      clr.className = "clear-stock";
+      clr.textContent = "清除个股筛选";
+      clr.addEventListener("click", () => jumpToStock(""));
+      elRollup.appendChild(clr);
+
+      for (const d of docsSorted) {
+        const block = document.createElement("div");
+        block.className = "rollup-doc";
+        const h3 = document.createElement("h3");
+        const headBits = [d.file_name || d.record_id || ""];
+        if (d.archive_year) headBits.push(String(d.archive_year) + "年");
+        headBits.push(d.institution || "");
+        h3.appendChild(document.createTextNode(headBits.filter(Boolean).join(" · ")));
+        if (d.date) h3.appendChild(document.createTextNode(" · " + d.date));
+        const db = d.bias || "中性";
+        const bp = document.createElement("span");
+        bp.className =
+          "bias-pill " + (db === "偏多" ? "long" : db === "偏空" ? "short" : "neutral");
+        bp.textContent = "本篇·" + db;
+        h3.appendChild(bp);
+        block.appendChild(h3);
+        const ul = document.createElement("ul");
+        ul.className = "rollup-snips";
+        for (const sn of d.snippets || []) {
+          const li = document.createElement("li");
+          const lab = document.createElement("span");
+          lab.className = "snip-label";
+          lab.textContent = (sn.label || "") + " ";
+          li.appendChild(lab);
+          const sb = sn.bias || "中性";
+          const sp = document.createElement("span");
+          sp.className =
+            "bias-pill " + (sb === "偏多" ? "long" : sb === "偏空" ? "short" : "neutral");
+          sp.textContent = sb;
+          li.appendChild(sp);
+          li.appendChild(document.createTextNode(" " + (sn.text || "")));
+          ul.appendChild(li);
+        }
+        block.appendChild(ul);
+        elRollup.appendChild(block);
+      }
+    }
+
+    function match(r) {
+      const vy = elYear.value;
+      if (vy && String(r.archive_year || "") !== vy) return false;
+      const vi = elInst.value;
+      if (vi && r.institution !== vi) return false;
+      const va = elAsset.value;
+      if (va && !(r.asset_tags || []).includes(va)) return false;
+      const tt = elTicker.value.trim().toLowerCase();
+      if (tt) {
+        const sm = (r.stock_mentions || []).flatMap((m) => [
+          m.key,
+          m.display,
+          displayAsStockName(m.display, m.key),
+        ]);
+        const pool = (sm.join(" ") + " " + (r.tickers || []).join(" ") + " " + (r.file_name || "")).toLowerCase();
+        if (!pool.includes(tt)) return false;
+      }
+      const pf = elPerson.value.trim().toLowerCase();
+      if (pf) {
+        const names = (r.key_people || []).map((x) => String(x).toLowerCase());
+        if (!names.some((n) => n.includes(pf))) return false;
+      }
+      const qTokens = querySearchTokens(elQ.value);
+      if (qTokens.length) {
+        const blob = matchFulltextBlob(r);
+        if (!qTokens.some((t) => blob.includes(t))) return false;
+      }
+      return true;
+    }
+
+    function collectKeysFromRecord(r) {
+      const keys = [];
+      const seen = new Set();
+      for (const m of r.stock_mentions || []) {
+        const k = m.key;
+        if (k && !seen.has(k)) {
+          seen.add(k);
+          keys.push(k);
+        }
+      }
+      for (const t of r.tickers || []) {
+        const k = String(t).trim();
+        if (k && !seen.has(k)) {
+          seen.add(k);
+          keys.push(k);
+        }
+      }
+      return keys;
+    }
+
+    function mergedStockKeysForRecords(recs) {
+      const seen = new Set();
+      const keys = [];
+      for (const r of recs) {
+        for (const k of collectKeysFromRecord(r)) {
+          if (!seen.has(k)) {
+            seen.add(k);
+            keys.push(k);
+          }
+        }
+      }
+      keys.sort((a, b) => {
+        const la = stockNavLabel(pickStockEntry(a) || { key: a, display: a });
+        const lb = stockNavLabel(pickStockEntry(b) || { key: b, display: b });
+        return la.localeCompare(lb, "zh-CN");
+      });
+      return keys;
+    }
+
+    function buildMentionLookup(r) {
+      const map = new Map();
+      for (const m of r.stock_mentions || []) {
+        if (m.key) map.set(m.key, m);
+      }
+      return map;
+    }
+
+    function appendStockChipsForKeys(container, keys, mentionLookup) {
+      for (const key of keys) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "stock-chip";
+        const mention = mentionLookup ? mentionLookup.get(key) : null;
+        if (mention) {
+          const n = (mention.snippets || []).length;
+          const bb = mention.bias || "中性";
+          btn.textContent =
+            displayAsStockName(mention.display, mention.key) +
+            (n ? " · " + n + "条" : "") +
+            " · " +
+            bb;
+        } else {
+          const te = pickStockEntry(key);
+          btn.textContent = te ? stockNavLabel(te) : key;
+        }
+        btn.addEventListener("click", () => jumpToStock(key));
+        container.appendChild(btn);
+      }
+      if (!keys.length) {
+        const sp = document.createElement("span");
+        sp.className = "meta";
+        sp.textContent = "（未识别到个股/代码）";
+        container.appendChild(sp);
+      }
+    }
+
+    function render() {
+      renderStockRollup();
+      const filtered = records.filter(match);
+      elStats.innerHTML = "";
+      const pill = (k, v) => {
+        const p = document.createElement("span");
+        p.className = "pill";
+        p.innerHTML = "<b>" + v + "</b> " + k;
+        elStats.appendChild(p);
+      };
+      pill("条记录（筛选后）", String(filtered.length));
+      pill("机构数", String(institutions.length));
+      pill("资产标签数", String(assets.length));
+      pill("人物标签数", String(peopleAll.length));
+      const byY = payload.meta?.records_by_year;
+      if (byY && Object.keys(byY).length) {
+        const parts = Object.entries(byY).sort((a, b) =>
+          yearSortKey(b[0]).localeCompare(yearSortKey(a[0]))
+        );
+        pill(
+          "按年（全库）",
+          parts.map(([y, n]) => String(y) + "×" + String(n)).join(" · ")
+        );
+      }
+
+      const pfPerson = elPerson.value.trim();
+      const ttRaw = elTicker.value.trim();
+      const scopedCombo = Boolean(pfPerson && ttRaw);
+      elPersonStockBanner.hidden = true;
+      elPersonStockBanner.innerHTML = "";
+      if (pfPerson && filtered.length) {
+        elPersonStockBanner.hidden = false;
+        const h3b = document.createElement("h3");
+        h3b.textContent = scopedCombo
+          ? "「" + pfPerson + "」×「" + ttRaw + "」· 交叉筛选"
+          : "「" + pfPerson + "」相关纪要 · 个股汇总（去重）";
+        elPersonStockBanner.appendChild(h3b);
+        const subb = document.createElement("div");
+        subb.className = "sub";
+        subb.textContent = scopedCombo
+          ? "共 " +
+            filtered.length +
+            " 条同时满足人物与标的；以下为其中与该标的相关的个股（去重），点击可查看上方个股汇总。"
+          : "共 " +
+            filtered.length +
+            " 条沟通；以下为上述纪要中出现的全部个股，点击可跳转至个股汇总。";
+        elPersonStockBanner.appendChild(subb);
+        const brow = document.createElement("div");
+        brow.className = "stock-chips";
+        let bkeys = mergedStockKeysForRecords(filtered);
+        if (scopedCombo) {
+          const tl = ttRaw.toLowerCase();
+          bkeys = bkeys.filter((k) => keyMatchesTickerSearchToken(k, tl));
+        }
+        appendStockChipsForKeys(brow, bkeys, null);
+        elPersonStockBanner.appendChild(brow);
+      }
+
+      elList.innerHTML = "";
+      if (!filtered.length) {
+        const d = document.createElement("div");
+        d.className = "empty";
+        d.textContent = "没有符合筛选条件的记录。";
+        elList.appendChild(d);
+        return;
+      }
+      const sorted = [...filtered].sort((a, b) => {
+        const ya = yearSortKey(a.archive_year);
+        const yb = yearSortKey(b.archive_year);
+        if (ya !== yb) return yb.localeCompare(ya);
+        const da = a.date || "";
+        const db = b.date || "";
+        return db.localeCompare(da);
+      });
+      for (const r of sorted) {
+        const view = scopedCombo ? scopeRecordToTickerView(r, ttRaw.toLowerCase()) : r;
+        const art = document.createElement("article");
+        const head = document.createElement("div");
+        head.className = "card-head";
+        const t = document.createElement("div");
+        t.className = "title";
+        if (r.archive_year) {
+          const yb = document.createElement("span");
+          yb.className = "year-pill";
+          yb.textContent = String(r.archive_year) + "年";
+          t.appendChild(yb);
+        }
+        const tname = document.createElement("span");
+        tname.textContent = r.file_name || r.id;
+        t.appendChild(tname);
+        const m = document.createElement("div");
+        m.className = "meta";
+        const inst = r.institution || "";
+        const folder = r.source_folder || "";
+        m.textContent = folder ? inst + " · " + folder : inst;
+        head.appendChild(t);
+        head.appendChild(m);
+        const timeEl = document.createElement("div");
+        timeEl.className = "communicated-at";
+        const ct = r.communicated_at || r.date;
+        timeEl.textContent = ct
+          ? "沟通时间：" + ct
+          : "沟通时间：未识别（文件名或正文未解析到日期）";
+        head.appendChild(timeEl);
+        art.appendChild(head);
+
+        if (scopedCombo) {
+          const hint = document.createElement("div");
+          hint.className = "meta";
+          hint.style.marginTop = "6px";
+          hint.style.color = "var(--accent)";
+          hint.textContent =
+            "人物 × 标的：以下仅展示与「" + ttRaw + "」相关的要点与个股摘录（其余标的已折叠）。";
+          art.appendChild(hint);
+        }
+
+        if (pfPerson) {
+          const cKeys = collectKeysFromRecord(view);
+          const wrapPs = document.createElement("div");
+          wrapPs.className = "person-card-stocks";
+          const pslab = document.createElement("div");
+          pslab.className = "stock-row-title";
+          pslab.textContent = scopedCombo
+            ? "「" + pfPerson + "」×「" + ttRaw + "」· 本纪要相关标的"
+            : "「" + pfPerson + "」相关 · 本纪要个股";
+          wrapPs.appendChild(pslab);
+          const prowPs = document.createElement("div");
+          prowPs.className = "stock-chips";
+          appendStockChipsForKeys(prowPs, cKeys, buildMentionLookup(view));
+          wrapPs.appendChild(prowPs);
+          art.appendChild(wrapPs);
+        }
+
+        const tags = document.createElement("div");
+        tags.className = "tags";
+        (r.asset_tags || []).forEach((x) => {
+          const s = document.createElement("span");
+          s.className = "tag";
+          s.textContent = x;
+          tags.appendChild(s);
+        });
+        art.appendChild(tags);
+
+        const peeps = r.key_people || [];
+        if (peeps.length) {
+          const ptitle = document.createElement("div");
+          ptitle.className = "stock-row-title";
+          ptitle.textContent = "关键人物（点击按人物筛选）";
+          art.appendChild(ptitle);
+          const prow = document.createElement("div");
+          prow.className = "stock-chips";
+          for (const p of peeps) {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className = "person-chip";
+            b.textContent = p;
+            b.addEventListener("click", () => {
+              elPerson.value = p;
+              render();
+              elList.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+            prow.appendChild(b);
+          }
+          art.appendChild(prow);
+        }
+
+        const mentions = Array.isArray(view.stock_mentions) ? view.stock_mentions : [];
+        if (!pfPerson) {
+          const stockTitle = document.createElement("div");
+          stockTitle.className = "stock-row-title";
+          stockTitle.textContent = mentions.length ? "涉及个股（点击跳转汇总）" : "涉及个股";
+          art.appendChild(stockTitle);
+          const schips = document.createElement("div");
+          schips.className = "stock-chips";
+          if (mentions.length) {
+            for (const m of mentions) {
+              const btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = "stock-chip";
+              const n = (m.snippets || []).length;
+              const bb = m.bias || "中性";
+              btn.textContent =
+                displayAsStockName(m.display, m.key) +
+                (n ? " · " + n + "条" : "") +
+                " · " +
+                bb;
+              btn.addEventListener("click", () => jumpToStock(m.key));
+              schips.appendChild(btn);
+            }
+          } else {
+            (view.tickers || []).slice(0, 24).forEach((x) => {
+              const btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = "stock-chip";
+              const te = pickStockEntry(x);
+              btn.textContent = te ? stockNavLabel(te) : x;
+              btn.addEventListener("click", () => jumpToStock(x));
+              schips.appendChild(btn);
+            });
+            if (!(view.tickers || []).length) {
+              const sp = document.createElement("span");
+              sp.className = "meta";
+              sp.textContent = "（未识别到个股/代码）";
+              schips.appendChild(sp);
+            }
+          }
+          art.appendChild(schips);
+        }
+
+        const pts = Array.isArray(view.key_points) ? view.key_points : [];
+        if (pts.length) {
+          const kt = document.createElement("div");
+          kt.className = "kp-title";
+          kt.textContent = "关键要点";
+          art.appendChild(kt);
+          const ul = document.createElement("ul");
+          ul.className = "kp-list";
+          for (const item of pts) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          }
+          art.appendChild(ul);
+        }
+
+        const det = document.createElement("details");
+        det.className = "more";
+        const sm = document.createElement("summary");
+        sm.textContent = pts.length ? "展开：连续摘要（便于复制）" : "展开：摘要全文";
+        det.appendChild(sm);
+        const sum = document.createElement("div");
+        sum.className = "summary";
+        sum.textContent = r.summary || "";
+        det.appendChild(sum);
+        art.appendChild(det);
+
+        const path = document.createElement("div");
+        path.className = "path";
+        path.textContent = "源文件：" + (r.source_path || "");
+        art.appendChild(path);
+
+        elList.appendChild(art);
+      }
+    }
+
+    elStockNav.addEventListener("change", () => {
+      jumpToStock(elStockNav.value);
+    });
+
+    elBtnPerson.addEventListener("click", () => render());
+    elBtnPersonClear.addEventListener("click", () => {
+      elPerson.value = "";
+      render();
+    });
+
+    [elInst, elAsset, elTicker, elQ].forEach((el) => el.addEventListener("input", render));
+    elPerson.addEventListener("input", render);
+    [elInst, elYear, elAsset].forEach((el) => el.addEventListener("change", render));
+    window.addEventListener("hashchange", () => {
+      applyStockNavFromHash();
+      render();
+    });
+    applyStockNavFromHash();
+    render();
+  </script>
+</body>
+</html>

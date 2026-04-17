@@ -1,0 +1,226 @@
+{
+  "GOOGL": {
+    "display": "谷歌（GOOGL）",
+    "yahoo_symbol": "GOOGL",
+    "yahoo": "Alphabet Inc.",
+    "tencent_cn": null,
+    "override_cn": "谷歌"
+  },
+  "AMZN": {
+    "display": "亚马逊（AMZN）",
+    "yahoo_symbol": "AMZN",
+    "yahoo": "Amazon.com, Inc.",
+    "tencent_cn": null,
+    "override_cn": "亚马逊"
+  },
+  "META": {
+    "display": "META",
+    "yahoo_symbol": "META",
+    "yahoo": "Meta Platforms, Inc.",
+    "tencent_cn": null,
+    "override_cn": "Meta"
+  },
+  "AMD": {
+    "display": "Advanced Micro Devices, Inc.（AMD）",
+    "yahoo_symbol": "AMD",
+    "yahoo": "Advanced Micro Devices, Inc.",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "TSLA": {
+    "display": "特斯拉（TSLA）",
+    "yahoo_symbol": "TSLA",
+    "yahoo": "Tesla, Inc.",
+    "tencent_cn": null,
+    "override_cn": "特斯拉"
+  },
+  "MSFT": {
+    "display": "微软（MSFT）",
+    "yahoo_symbol": "MSFT",
+    "yahoo": "Microsoft Corporation",
+    "tencent_cn": null,
+    "override_cn": "微软"
+  },
+  "VIL.A": {
+    "display": "VIL（VIL.A）",
+    "yahoo_symbol": "VIL",
+    "yahoo": "VIL",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "000660": {
+    "display": "*ST南华（000660）",
+    "yahoo_symbol": "000660.SZ",
+    "yahoo": null,
+    "tencent_cn": "*ST南华",
+    "override_cn": null
+  },
+  "NVDA": {
+    "display": "英伟达（NVDA）",
+    "yahoo_symbol": "NVDA",
+    "yahoo": "NVIDIA Corporation",
+    "tencent_cn": null,
+    "override_cn": "英伟达"
+  },
+  "688017": {
+    "display": "绿的谐波（688017）",
+    "yahoo_symbol": "688017.SS",
+    "yahoo": "LEADER HARMONIOUS DRIVE SYSTEMS",
+    "tencent_cn": "绿的谐波",
+    "override_cn": null
+  },
+  "300760": {
+    "display": "迈瑞医疗（300760）",
+    "yahoo_symbol": "300760.SZ",
+    "yahoo": "SHENZHEN MINDRAY B",
+    "tencent_cn": "迈瑞医疗",
+    "override_cn": null
+  },
+  "600019": {
+    "display": "宝钢股份（600019）",
+    "yahoo_symbol": "600019.SS",
+    "yahoo": "BAOSHAN IRON & STEEL CO",
+    "tencent_cn": "宝钢股份",
+    "override_cn": null
+  },
+  "TME.N": {
+    "display": "Tencent Music Entertainment Gro（TME.N）",
+    "yahoo_symbol": "TME",
+    "yahoo": "Tencent Music Entertainment Gro",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "BIDU.O": {
+    "display": "Baidu, Inc.（BIDU.O）",
+    "yahoo_symbol": "BIDU",
+    "yahoo": "Baidu, Inc.",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "HTHT.O": {
+    "display": "H World Group Limited（HTHT.O）",
+    "yahoo_symbol": "HTHT",
+    "yahoo": "H World Group Limited",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "SE.N": {
+    "display": "Sea Limited（SE.N）",
+    "yahoo_symbol": "SE",
+    "yahoo": "Sea Limited",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "000625": {
+    "display": "长安汽车（000625）",
+    "yahoo_symbol": "000625.SZ",
+    "yahoo": "CHONG QING CHANGAN",
+    "tencent_cn": "长安汽车",
+    "override_cn": null
+  },
+  "002920": {
+    "display": "德赛西威（002920）",
+    "yahoo_symbol": "002920.SZ",
+    "yahoo": "HUIZHOU DESAY SV A",
+    "tencent_cn": "德赛西威",
+    "override_cn": null
+  },
+  "603596": {
+    "display": "伯特利（603596）",
+    "yahoo_symbol": "603596.SS",
+    "yahoo": "BETHEL AUTOMOTIVE SAFETY SYSTEM",
+    "tencent_cn": "伯特利",
+    "override_cn": null
+  },
+  "002906": {
+    "display": "华阳集团（002906）",
+    "yahoo_symbol": "002906.SZ",
+    "yahoo": "FORYOU CORPORATION",
+    "tencent_cn": "华阳集团",
+    "override_cn": null
+  },
+  "300750": {
+    "display": "宁德时代（300750）",
+    "yahoo_symbol": "300750.SZ",
+    "yahoo": "CONTEMPORARY AMPER",
+    "tencent_cn": "宁德时代",
+    "override_cn": null
+  },
+  "000786": {
+    "display": "北新建材（000786）",
+    "yahoo_symbol": "000786.SZ",
+    "yahoo": "BEIJING NEW BLDG",
+    "tencent_cn": null,
+    "override_cn": "北新建材"
+  },
+  "601857": {
+    "display": "中国石油（601857）",
+    "yahoo_symbol": "601857.SS",
+    "yahoo": "PETROCHINA CO",
+    "tencent_cn": "中国石油",
+    "override_cn": null
+  },
+  "600585": {
+    "display": "海螺水泥（600585）",
+    "yahoo_symbol": "600585.SS",
+    "yahoo": "ANHUI CONCH CEMENT",
+    "tencent_cn": "海螺水泥",
+    "override_cn": null
+  },
+  "AAPL": {
+    "display": "苹果（AAPL）",
+    "yahoo_symbol": "AAPL",
+    "yahoo": "Apple Inc.",
+    "tencent_cn": null,
+    "override_cn": "苹果"
+  },
+  "000852": {
+    "display": "石化机械（000852）",
+    "yahoo_symbol": "000852.SZ",
+    "yahoo": "SINOPEC OILFIELD E",
+    "tencent_cn": "石化机械",
+    "override_cn": null
+  },
+  "HK9636": {
+    "display": "JF SMARTINVEST（HK9636）",
+    "yahoo_symbol": "9636.HK",
+    "yahoo": "JF SMARTINVEST",
+    "tencent_cn": null,
+    "override_cn": null
+  },
+  "601877": {
+    "display": "正泰电器（601877）",
+    "yahoo_symbol": "601877.SS",
+    "yahoo": "ZHEJIANG CHINT ELECTRICS CO LTD",
+    "tencent_cn": "正泰电器",
+    "override_cn": null
+  },
+  "603501": {
+    "display": "豪威集团（603501）",
+    "yahoo_symbol": "603501.SS",
+    "yahoo": "OMNIVISION INTEGRATED CIRCUITS",
+    "tencent_cn": "豪威集团",
+    "override_cn": null
+  },
+  "002230": {
+    "display": "科大讯飞（002230）",
+    "yahoo_symbol": "002230.SZ",
+    "yahoo": "IFLYTEK CO LTD",
+    "tencent_cn": "科大讯飞",
+    "override_cn": null
+  },
+  "688561": {
+    "display": "奇安信-U（688561）",
+    "yahoo_symbol": "688561.SS",
+    "yahoo": "QI AN XIN TECHNOLOGY GROUP INC",
+    "tencent_cn": "奇安信-U",
+    "override_cn": null
+  },
+  "HK1810": {
+    "display": "小米集团（HK1810）",
+    "yahoo_symbol": "1810.HK",
+    "yahoo": "XIAOMI-W",
+    "tencent_cn": null,
+    "override_cn": "小米集团"
+  }
+}

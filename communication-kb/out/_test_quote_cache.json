@@ -1,0 +1,16 @@
+{
+  "000786": {
+    "display": "北新建材（000786）",
+    "yahoo_symbol": "000786.SZ",
+    "yahoo": "BEIJING NEW BLDG",
+    "tencent_cn": null,
+    "override_cn": "北新建材"
+  },
+  "NVDA": {
+    "display": "英伟达（NVDA）",
+    "yahoo_symbol": "NVDA",
+    "yahoo": "NVIDIA Corporation",
+    "tencent_cn": null,
+    "override_cn": "英伟达"
+  }
+}

@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+
+# Editor / OS
+.cursor/
+__MACOSX/
+.DS_Store
+
+# Local junk / large artifacts (adjust as needed)
+_luo_debug.txt
+*.zip
